@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style_history.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Coffe Shop</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <!-- Header -->
+      <div class="top_navbar border fixed-top">
+        <div class="hamburger border">
+           <div class="hamburger__inner">
+             <img src="icon/menu (1).png" alt="">
+           </div>
+        </div>
+        <div class="menu">
+          <div class="logo">
+            <h3>History</h3>
+          </div>
+        </div>
+      </div>   
+      <!-- End of header -->
+
+      <!-- Main -->
+      <div class="main_container">
+          <!-- sidebar -->
+          <div class="sidebar">
+              <div class="sidebar__inner">
+                <ul>
+                  <li>
+                    <a href="index.html">
+                      <span class="icon"><img src="icon/fork.png" alt=""></span>
+                      <span class="title text-dark">Menu</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="icon"><img src="icon/clipboard.png" alt=""></span>
+                      <span class="title text-dark">History</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#Modal">
+                      <span class="icon"><img src="icon/add.png"></i></span>
+                      <span class="title text-dark">Add</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <!-- End of sidebar -->
+
+          <!-- Main Content -->
+          <div class="container-fluid ctr" style="background: #E5E5E5;;">
+            <!-- Content -->
+            <div class="squares">
+                <div class="first square">
+                    <div style="margin-left: 30px;">
+                        <br><p>Today's Income</p>
+                        <h3>Rp. 1.000.000</h3>
+                        <p>+2% Yesterday</p>
+                        </div>
+                </div>
+                <div class="second square">
+                    <div style="margin-left: 30px;">
+                        <br><p>Orders</p>
+                        <h3>3.270</h3>
+                        <p>+5% Last Week</p>
+                        </div>
+                </div>
+                <div class="third square">
+                    <div style="margin-left: 30px;">
+                        <br><p>This Year's Income</p>
+                        <h3>Rp. 100.000.000.000</h3>
+                        <p>+10% Last Year</p>
+                        </div>
+                </div>
+            </div>
+            <div class="card mb-4 mt-1" style="box-shadow: 6px 6px 2px rgba(0,0,0,0.4); border-radius: 10px;">
+                <h3 class="m-4">Revenue</h3>
+                <select id="inputState" class="form-control" style="width: 15%; position: absolute; right: 40px; top: 20px; border-radius: 30px; background: #E5E5E5;">
+                    <option selected>Month</option>
+                    <option>...</option>
+                  </select>
+            <div>
+            <canvas id="myChart" style="width: 1335px; height: 400px;"></canvas>
+            <div class=" m-3 mb-4 small">Updated yesterday at 11:59 PM</div>
+            </div>
+          </div>
+          <div class="recent_order">
+            <table class="table table-light" style="box-shadow: 6px 6px 2px rgba(0,0,0,0.4); border-radius: 10px;">
+            <select id="inputState" class="form-control mt-3" style="width: 10%; border-radius: 30px; background: #E5E5E5; position: absolute; right: 5%;">
+                <option selected>Today</option>
+                <option>...</option>
+              </select>
+              <thead>
+                  <tr>
+                      <th><h2>Recent Order</h2></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>INVOICE</td>
+                      <td>CASHIER</td>
+                      <td>DATE</td>
+                      <td>ORDERS</td>
+                      <td>AMOUNT</td>
+                  </tr>
+                  <tr class="text-secondary">
+                      <th>#10929</th>
+                      <th>Cashier 1</th>
+                      <th>06 October 2019</th>
+                      <th>Ice Tea, Salad With hazelnut</th>
+                      <th>Rp. 120.000</th>
+                  </tr>
+                  <tr class="text-secondary">
+                    <th>#10928</th>
+                    <th>Cashier 1</th>
+                    <th>06 October 2019</th>
+                    <th>Ice Tea</th>
+                    <th>Rp. 30.000</th>
+                </tr>
+                <tr class="text-secondary">
+                    <th>#10930</th>
+                    <th>Cashier 1</th>
+                    <th>06 October 2019</th>
+                    <th>Coffe Latte</th>
+                    <th>Rp. 15.000</th>
+                </tr>
+                <tr class="text-secondary">
+                    <th>#10931</th>
+                    <th>Cashier 1</th>
+                    <th>06 October 2019</th>
+                    <th>Black Forest</th>
+                    <th>Rp. 30.000</th>
+                </tr>
+              </tbody>
+          </table>
+          </div>
+            <!-- End of content -->         
+          </div>
+          <!-- End of main content -->
+      </div>
+    </div>
+    <!-- End of main -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="exampleModalLabel">Add Items</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Image</label>
+                <div class="col-sm-10">
+                  <input type="file" class="form-control-file">
+                </div>  
+              </div>
+            </form>
+           <form>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Price</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputState" class="col-sm-2 col-form-label">Category</label>
+              <div class="col-sm-4">
+                <select id="inputState" class="form-control">
+                  <option selected>Category</option>
+                  <option>...</option>
+                </select>
+              </div>
+            </div>
+           </form>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn text-white" style="background-color: #F24F8A;" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn text-white" style="background-color:#57CAD5;">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of modal -->
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(".hamburger").click(function(){
+             $(".wrapper").toggleClass("active");
+          });
+        });
+
+        var ctx = $("#myChart")
+        var lineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels : ["","","","","","","","","","","","","","","","","","",""],
+          datasets : [
+            {
+              label: "This Month",
+              data: [0,20000,10000,28000,21000,39800,12000,47000,40000,32000,36000,24000,46000,35000,39000,30000,23000,39000,30000],
+              borderColor: ['#57CAD5'],
+              backgroundColor: ['rgba(255, 255, 255, 0)']
+            },
+            {
+              label : "This Month",
+              data: [10000,30000,1000,38000,21000,39000,12000,28000,21000,48000,12000,28000,12000,40000,28000,40000,12000,28000,40000],
+              borderColor: ['#F24F8A'],
+              backgroundColor: ['rgba(255, 255, 255, 0)']
+            }
+          ],
+        }
+      })
+    </script>
+  </body>
+</html>
